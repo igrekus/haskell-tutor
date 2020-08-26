@@ -119,3 +119,7 @@ cylArea r h =
 
 calcBmis' :: (RealFloat a) => [(a, a)] -> [a]
 calcBmis' xs = [bmi | (w, h) <- xs, let bmi = w / h ^ 2]
+
+head'' :: [a] -> a
+head'' xs = case xs of [] -> error "empty"
+                       (x:_) -> x
