@@ -31,3 +31,8 @@ quicksort' (x:xs) =
     big ++ [x] ++ small
     where big = quicksort' [a | a <- xs, a <= x] 
           small = quicksort' [a | a <- xs, a > x]
+
+quicksort'' :: (Ord a) => [a] -> [a]
+quicksort'' [] = []
+quicksort'' (x:xs) =
+    quicksort'' [a | a <- xs, a <= x] ++ [x] ++ quicksort'' [a | a <- xs, a > x]
