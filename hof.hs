@@ -18,3 +18,9 @@ divByTen = (/ 10)
 
 isUpperAlpha :: Char -> Bool
 isUpperAlpha = (`elem` ['A' .. 'Z'])
+
+inc :: (Num a) => a -> a
+inc = (+ 1)
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f a = f(f a)
