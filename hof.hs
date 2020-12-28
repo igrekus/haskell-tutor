@@ -67,3 +67,6 @@ addThreeLambda = \x -> \y -> \z -> x + y + z
 
 addThreeCollapsedLambda :: (Num a) => a -> a-> a-> a
 addThreeCollapsedLambda = \x y z -> x + y + z
+
+flip''' :: (a -> b -> c) -> b -> a -> c
+flip''' f = \x y -> f y x
