@@ -70,3 +70,6 @@ addThreeCollapsedLambda = \x y z -> x + y + z
 
 flip''' :: (a -> b -> c) -> b -> a -> c
 flip''' f = \x y -> f y x
+
+sum' :: (Num a) => [a] -> a
+sum' xs = foldl (\acc x -> acc + x) 0 xs
