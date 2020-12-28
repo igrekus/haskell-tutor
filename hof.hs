@@ -55,3 +55,6 @@ collatz n
 
 numLongCollatz :: Int
 numLongCollatz = length (filter (\xs -> length xs > 15) (map collatz [1..100]))
+
+numLongCollatz' :: (Integral a) => Int -> [a] -> Int
+numLongCollatz' x xs = length (filter (\ys -> length ys > x) (map collatz xs))
