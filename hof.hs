@@ -52,3 +52,6 @@ collatz 1 = [1]
 collatz n
     | even n = n: collatz (n `div` 2)
     | odd n = n: collatz (3 * n + 1)
+
+numLongCollatz :: Int
+numLongCollatz = length (filter (\xs -> length xs > 15) (map collatz [1..100]))
