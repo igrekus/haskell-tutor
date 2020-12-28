@@ -76,3 +76,6 @@ sum' xs = foldl (\acc x -> acc + x) 0 xs
 
 sum'' :: (Num a) => [a] -> a
 sum'' = foldl (+) 0
+
+elem' :: (Eq a) => a -> [a] -> Bool
+elem' x xs = foldl (\acc y -> if x == y then True else acc) False xs
