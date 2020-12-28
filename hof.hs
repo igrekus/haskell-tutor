@@ -58,3 +58,12 @@ numLongCollatz = length (filter (\xs -> length xs > 15) (map collatz [1..100]))
 
 numLongCollatz' :: (Integral a) => Int -> [a] -> Int
 numLongCollatz' x xs = length (filter (\ys -> length ys > x) (map collatz xs))
+
+addThree :: (Num a) => a -> a -> a -> a
+addThree x y z = x + y + z
+
+addThreeLambda :: (Num a) => a -> a-> a-> a
+addThreeLambda = \x -> \y -> \z -> x + y + z
+
+addThreeCollapsedLambda :: (Num a) => a -> a-> a-> a
+addThreeCollapsedLambda = \x y z -> x + y + z
