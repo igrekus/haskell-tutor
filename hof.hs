@@ -82,13 +82,3 @@ elem' x xs = foldl (\acc y -> if x == y then True else acc) False xs
 
 elem'' :: (Eq a) => a -> [a] -> Bool
 elem'' x = foldl (\acc y -> (x == y) || acc) False
-
-_map :: (a -> b) -> [a] -> [b]
-_map _ [] = []
-_map f (x:xs) = f x : map f xs
-
-_filter :: (a -> Bool) -> [a] -> [a]
-_filter _ [] = []
-_filter p (x:xs)
-    | p x = x : _filter p xs
-    | otherwise = _filter p xs
