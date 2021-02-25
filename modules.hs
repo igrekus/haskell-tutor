@@ -21,3 +21,7 @@ encode shift message =
 encode' :: Int -> String -> String 
 encode' shift = 
     map (chr . (+ shift) . ord)
+
+decode :: Int -> String -> String
+decode shift = encode (negate shift)
+
